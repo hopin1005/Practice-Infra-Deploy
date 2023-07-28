@@ -28,3 +28,5 @@
 
 ### Step 9. push image to gcr
 - docker push gcr.io/project-id/web-frontend:latest
+
+### Step 10. create a private cluster on gcp
