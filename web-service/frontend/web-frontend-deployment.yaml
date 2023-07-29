@@ -16,4 +16,4 @@ spec:
         - name: nodejs-web
           image: gcr.io/infra-deploy-394001/web-frontend:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 30
