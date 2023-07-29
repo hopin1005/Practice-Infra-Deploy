@@ -33,3 +33,11 @@
 
 ### Step 11. Deploy a container using deployment.yaml
 - check web-frontend-deployment.yaml
+- kubectl apply -f web-frontend-deployment.yaml
+
+
+### Step 12. Deploy service
+- check web-frontend-service.yaml
+- kubectl apply -f web-frontend-service.yaml
+- kubectl get services
+- visit the external ip ! 
