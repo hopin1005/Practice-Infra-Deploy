@@ -3,4 +3,3 @@ This project is for praticing some service . e.g. Google LB / Envoy / Cloudflare
 
 
 ## Infra Structure
-![Infra](./structure-png/Infra-Structure.png)
