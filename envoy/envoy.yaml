@@ -22,6 +22,14 @@ static_resources:
           - name: envoy.filters.http.router
             typed_config:
              "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+      transport_socket:
+        name: envoy.transport_sockets.tls
+        typed_config:
+          "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.DownstreamTlsContext
+          common_tls_context:
+            tls_certificates:
+            - certificate_chain: { filename: "/etc/envoy/certificate.pem" }
+              private_key: { filename: "/etc/envoy/private_key.pem" }
   clusters:
   - name: web-frontend-cluster
     connect_timeout: 0.25s

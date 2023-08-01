@@ -10,4 +10,16 @@
 
 ## Step 4. deploy envoy on k8s
 - check envoy-deployment.yaml
-- kubectl apply -t envoy-deployment.yaml
+- kubectl apply -f envoy-deployment.yaml
+
+## Step 5. deploy service.yaml
+- check envoy-service.yaml
+- kubectl apply -f envoy-service.yaml
+
+
+## Step 6. create a ssl certificate from cloudflare
+- buying a domain whaterver you want
+- setting your domain on cloudflare
+- create a ssl ca
+    - side bar > SSL / TLS > Origin Server > create a certificate and private key
+- change dockerfile and envoy.yaml to fit ssl settiing
