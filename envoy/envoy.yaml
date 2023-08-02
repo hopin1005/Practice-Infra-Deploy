@@ -42,4 +42,4 @@ static_resources:
       - lb_endpoints:
         - endpoint:
             address:
-              socket_address: { address: 10.128.0.26, port_value: 80 }
+              socket_address: { address: <internal cluster ip>, port_value: 80 }
