@@ -3,7 +3,7 @@
 ## Step 2. Setup a role with permission
 - compute.instances.get
 - compute.projects.get
-- compute.instances.setMetadata (should be remove later)
+- compute.instances.setMetadata (should be removed later)
 
 ## Step 3. Setup IAM and binding role
 - the permission above setup
