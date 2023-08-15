@@ -5,4 +5,5 @@ This project is for praticing some service . e.g. Google LB / Envoy / Cloudflare
 ## Infra Structure
 
 ### Web Structure
-- ![Frontend-Backend-Structure](./web-service/web-structure.png)
+
+![Frontend-Backend-Structure](./web-service/web-structure.png)
