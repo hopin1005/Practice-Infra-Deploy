@@ -1,2 +1,3 @@
 ./web-service/backend/node_modules/*
-./web-service/frontend/node_modules/*
+./web-service/frontend/prod/node_modules/*
+./web-service/frontend/stage/node_modules/*
