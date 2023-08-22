@@ -6,4 +6,5 @@
 - check web-frontend-service.yaml
 
 ### Step 3. Restrict who can access on cloudlare firewall
-- Security > firewall -> vpn ip -> allow
+- Security > firewall 
+- (http.host eq "xxx.hopin.website" and ip.src ne xx.xx.xx.xx) -> block

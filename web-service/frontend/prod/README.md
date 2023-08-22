@@ -41,6 +41,3 @@
 - kubectl apply -f web-frontend-service.yaml
 - kubectl get services
 - visit the external ip ! 
-
-### Step 13. Allow cloudflare ip can access external ip
-- firewall rule (gcp)

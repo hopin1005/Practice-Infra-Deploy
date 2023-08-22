@@ -30,3 +30,6 @@
 ### Step 7. Setup another CNAME to your DNS
 - Check your DNS Server
 
+
+## Create firewall to limit only cloudflare can access
+### GCP -> firewall -> only allow cloudflare ip

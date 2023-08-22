@@ -18,11 +18,16 @@ static_resources:
               routes:
               - match: { prefix: "/" }
                 route: { host_rewrite_literal: frontend, cluster: web-frontend-cluster }
-            - name: vpn_service  # new virtual host
-              domains: ["vpn.hopin.website"] 
+            - name: stage_service
+              domains: ["stage.hopin.website"]  # corrected domain format
               routes:
               - match: { prefix: "/" }
-                route: { cluster: stage-cluster }  
+                route: { cluster: stage-cluster }
+            - name: vpn_service
+              domains: ["vpn.hopin.website"]
+              routes:
+              - match: { prefix: "/" }
+                route: { cluster: vpn-vm } 
           http_filters:
           - name: envoy.filters.http.router
             typed_config:
@@ -54,9 +59,21 @@ static_resources:
     dns_lookup_family: V4_ONLY
     lb_policy: ROUND_ROBIN
     load_assignment:
-      cluster_name: vpn-cluster
+      cluster_name: stage-cluster
       endpoints:
       - lb_endpoints:
         - endpoint:
             address:
               socket_address: { address: 10.128.0.58, port_value: 80 }
+  - name: vpn-vm
+    connect_timeout: 0.25s
+    type: LOGICAL_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: vpn-vm
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address: { address: 10.128.0.59, port_value: 443 }
